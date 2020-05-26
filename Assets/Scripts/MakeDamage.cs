@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MakeDamage : MonoBehaviour
 {
-    public int cantidad = 10;
+    public int cantidad = 1;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Health_and_Damage>().RestarVida(cantidad);
+            other.GetComponent<Health>().RestarVida(cantidad);
         }
     }
 
@@ -18,7 +18,7 @@ public class MakeDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Health_and_Damage>().RestarVida(cantidad);
+            other.GetComponent<Health>().RestarVida(cantidad);
         }
     }
 }

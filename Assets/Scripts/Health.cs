@@ -8,9 +8,15 @@ public class Health : MonoBehaviour
     public int health;
     public int numOfHearts;
 
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public RawImage[] hearts;
+    public Texture fullHeart;
+    public Texture emptyHeart;
+
+    public bool invencible = false;
+
+    public float tiempo_invencible = 1f;
+
+    public float tiempo_frenado = 0.2f;
 
     void Update()
     {
@@ -22,10 +28,10 @@ public class Health : MonoBehaviour
             }
             if(i < health)
             {
-                hearts[i].sprite = fullHeart;
+                hearts[i].texture = fullHeart;
             } else
             {
-                hearts[i].sprite = emptyHeart;
+                hearts[i].texture = emptyHeart;
             }
 
             if (i < numOfHearts)
@@ -38,4 +44,30 @@ public class Health : MonoBehaviour
             }
         }
     }
+    public void RestarVida(int cantidad)
+    {
+        if (!invencible && health > 0)
+        {
+            health -= cantidad;
+
+            StartCoroutine(Invulnerable());
+
+            StartCoroutine(FrenarVelocidad());
+        }
+    }
+    IEnumerator Invulnerable()
+    {
+        invencible = true;
+        yield return new WaitForSeconds(tiempo_invencible);
+        invencible = false;
+    }
+
+    IEnumerator FrenarVelocidad()
+    {
+        var velocidadActual = GetComponent<Player>().speed;
+        GetComponent<Player>().speed = 0;
+        yield return new WaitForSeconds(tiempo_frenado);
+        GetComponent<Player>().speed = velocidadActual;
+    }
+
 }
