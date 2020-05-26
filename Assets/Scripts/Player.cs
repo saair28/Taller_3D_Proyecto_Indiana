@@ -11,11 +11,17 @@ public class Player : MonoBehaviour
     public float rotZ;
     Rigidbody rb;
 
+    public float timer = 2f;
+
+    public float CuentaAtras = 1f;
+
     public bool isJump = false;
+
     public float jumpForce = 5.0f;
 
     private Camera mainCamera;
     
+    public int Could = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -49,12 +55,25 @@ public class Player : MonoBehaviour
 
     void jump()
     {
-        isJump = Input.GetButtonDown("Jump");
+        isJump = Input.GetMouseButtonDown(1);
 
-        if (isJump)
+        if (isJump && Could == 1)
         {
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+
+            Could += 1;
+
+            CuentaAtras = 1;
+        }
+
+        if (Could > 1)
+        {
+            CuentaAtras += 1 * Time.deltaTime;
+            
+            if (CuentaAtras >= 2)
+            {
+                Could = 1;
+            }
         }
     }
-
 }

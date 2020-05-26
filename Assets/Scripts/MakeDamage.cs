@@ -10,7 +10,7 @@ public class MakeDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Health_and_Damage>().RestarVida(cantidad);
+            other.GetComponent<Healt_and_Damage>().RestarVida(cantidad);
         }
     }
 
@@ -18,7 +18,7 @@ public class MakeDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Health_and_Damage>().RestarVida(cantidad);
+            other.GetComponent<Healt_and_Damage>().RestarVida(cantidad);
         }
     }
 }
