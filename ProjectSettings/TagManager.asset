@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerInteracion
+
   - Pared
   - suelo1
   - arbol1
@@ -17,6 +18,8 @@ TagManager:
   - "Ara\xF1a"
   - Bala
   - Cofre
+
+
   layers:
   - Default
   - TransparentFX

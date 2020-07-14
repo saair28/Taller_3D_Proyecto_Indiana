@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &820194083334298559
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +164,8 @@ Transform:
   m_Father: {fileID: 202894386761063276}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc
 --- !u!1 &6872575988947458252
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +261,53 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1 &6872575989195490930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6872575989195490929}
+  - component: {fileID: 6872575989195490928}
+  m_Layer: 0
+  m_Name: Manos
+  m_TagString: PlayerInteracion
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6872575989195490929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872575989195490930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.36, z: 0.676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6872575990037008064}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6872575989195490928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872575989195490930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 1, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0}
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc
 --- !u!1 &6872575989898803314
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,9 +410,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6872575990037008064}
+<<<<<<< HEAD
   - component: {fileID: 6872575990037008066}
   - component: {fileID: 6872575990037008065}
   - component: {fileID: 3913222078351604273}
+=======
+  - component: {fileID: 6872575990037008071}
+  - component: {fileID: 6872575990037008066}
+  - component: {fileID: 6872575990037008068}
+  - component: {fileID: 6872575990037008065}
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc
   - component: {fileID: 6872575990037008069}
   m_Layer: 0
   m_Name: Player
@@ -383,10 +440,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6872575988947458259}
+<<<<<<< HEAD
   - {fileID: 202894386761063276}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  - {fileID: 6872575989195490929}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6872575990037008071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872575990037008067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f93663c68e8ef3498de1cc776c712f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToPickUp: {fileID: 0}
+  PickedObject: {fileID: 0}
+  interationZone: {fileID: 6872575989195490929}
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc
 --- !u!114 &6872575990037008066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,8 +478,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68adae143ecd27408635d99160937cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   ContadorDeEscarabajos: 0
   speed: 30
+=======
+  speed: 20
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc
   rotationSpeed: 50
   rotX: 0
   rotY: 0
@@ -408,6 +491,7 @@ MonoBehaviour:
   timer: 4
   CuentaAtras: 2
   isJump: 0
+<<<<<<< HEAD
   Lento: 0
   jumpForce: 5
   weaponNumber: 0
@@ -419,6 +503,29 @@ MonoBehaviour:
   escarabajo: {fileID: 6027073952195113908, guid: a9e98ea7a78a165458da6ba85b946e5d,
     type: 3}
   Could: 1
+=======
+  jumpForce: 5
+  Could: 1
+--- !u!114 &6872575990037008068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872575990037008067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357b09e2659daa1468a4d78e9167d845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BalaPrefab: {fileID: 8826623759385955316, guid: f3c594ca811e2a4439a4d22f6504950d,
+    type: 3}
+  Disparo: {fileID: 0}
+  VelDis: 30
+  BalaPrefabInstanc: {fileID: 0}
+  iniciarDisparo: 0
+  tiempoDeDisparo: 1
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc
 --- !u!54 &6872575990037008065
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -435,6 +542,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!114 &3913222078351604273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +569,8 @@ MonoBehaviour:
   invencible: 0
   tiempo_invencible: 1
   tiempo_frenado: 0.2
+=======
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc
 --- !u!136 &6872575990037008069
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -475,6 +585,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &8845462510893233608
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,3 +633,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeleccionadaArma: 0
+=======
+>>>>>>> 151074ac0fe334417a6e895f3c887bbe3e5fc5cc

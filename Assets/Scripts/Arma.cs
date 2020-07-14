@@ -1,3 +1,4 @@
+
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,6 @@ public class Arma : MonoBehaviour
 
     public Transform Disparo;
 
-    public GameObject player;
-
     public float VelDis;
 
     public Rigidbody BalaPrefabInstanc;
@@ -18,26 +17,17 @@ public class Arma : MonoBehaviour
 
     public float tiempoDeDisparo;
 
-    public float timer;
-
     // Update is called once per frame
-
-    void Start()
-    {
-        //player = GameObject.Find("Player");
-    }
     void Update()
     {
-        timer += Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && Time.time > iniciarDisparo)
+        {
 
-            if (Input.GetMouseButtonDown(0) && timer > tiempoDeDisparo)
-            {
+            iniciarDisparo = Time.time + tiempoDeDisparo;
 
-                timer = 0;
+            BalaPrefabInstanc = Instantiate(BalaPrefab, Disparo.position, Quaternion.identity) as Rigidbody;
 
-                BalaPrefabInstanc = Instantiate(BalaPrefab, Disparo.position, Quaternion.identity) as Rigidbody;
-
-                BalaPrefabInstanc.AddForce(Disparo.forward * 100 * VelDis);
-            }
+            BalaPrefabInstanc.AddForce(Disparo.forward * 100 * VelDis);
+        }
     }
 }
